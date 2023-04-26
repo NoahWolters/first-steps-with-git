@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 16px;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+  font-family: "Courier New", Courier, monospace;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+}
+main {
+  max-width: 800px;
+  margin: 0;
+  padding: 16px;
+}
+header {
+  text-align: center;
+  background-color: aquamarine;
+  padding: 48px 16px;
+}
