@@ -8,6 +8,16 @@ body {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+@media screen and(min-width:786px) {
+  html {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) {
+    html {
+      font-size: 20px;
+    }
+  }
+}
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -18,7 +28,7 @@ h3 {
   font-family: "Times New Roman", Times, serif;
 }
 main {
-  max-width: 800px;
+  max-width: 40ch;
   margin: 0;
   padding: 1rem;
   max-width: 70ch;
@@ -90,7 +100,21 @@ aside {
   background-color: hotpink;
   padding: 0.25rem;
   position: absolute;
-  top: 1rem;
+  top: 1.15rem;
   right: 1.5rem;
   border-radius: 0.5rem;
+}
+aside {
+  position: fixed;
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+}
+@media print {
+  .navigation {
+    display: none;
+  }
 }
