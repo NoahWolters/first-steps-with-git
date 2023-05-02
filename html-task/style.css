@@ -3,7 +3,7 @@
 }
 body {
   margin: 0px;
-  padding: 16px;
+  padding: 1rem;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -20,18 +20,24 @@ h3 {
 main {
   max-width: 800px;
   margin: 0;
-  padding: 16px;
+  padding: 1rem;
+  max-width: 70ch;
 }
 header {
   text-align: center;
   background-color: grey;
-  padding: 48px 16px;
+  padding: 2.5rem 1rem;
+  position: relative;
+  right: 0.25rem;
 }
 article + article {
-  margin-top: 50px;
+  margin-top: 2.5rem;
+}
+article {
+  margin-top: 2.5rem;
 }
 .nav-link {
-  padding: 20px;
+  padding: 1rem;
 }
 .nav-link {
   color: black;
@@ -43,21 +49,48 @@ article + article {
   color: lightgreen;
 }
 article:nth-child(2) {
-  border-top: 5px solid black;
+  border-top: 0.25rem solid black;
 }
 article:nth-child(3) {
-  border-top: 5px solid black;
+  border-top: 0.25rem solid black;
 }
 article:nth-child(4) {
-  border-top: 5px solid black;
+  border-top: 0.25rem solid black;
 }
 article:nth-child(5) {
-  border-top: 5px solid black;
+  border-top: 0.25rem solid black;
 }
+
 ::selection {
   background-color: green;
   color: white;
 }
 h2::after {
   content: "🦸‍♂️";
+}
+
+html {
+  font-family: inherit;
+  font-size: 20px;
+}
+
+.experience-heading {
+  display: inline-block;
+  background-color: hidden;
+}
+.experience-subheading {
+  display: inline-block;
+}
+header {
+  position: relative;
+  bottom: 1rem;
+}
+aside {
+  color: white;
+  background-color: hotpink;
+  padding: 0.25rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  border-radius: 0.5rem;
 }
