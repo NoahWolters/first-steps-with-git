@@ -8,7 +8,7 @@ body {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
-@media screen and(min-width:786px) {
+@media screen and(min-width:768px) {
   html {
     font-size: 16px;
   }
@@ -117,4 +117,22 @@ aside {
   .navigation {
     display: none;
   }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and(768px) {
+  .navigation {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.experience {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
 }
