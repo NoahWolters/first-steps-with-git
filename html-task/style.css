@@ -4,41 +4,42 @@
 body {
   margin: 0px;
   padding: 1rem;
+  --background-color: white;
+  --text-color: black;
+  --accent-color: hotpink;
+  --brand-color: green;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 @media screen and(min-width:768px) {
   html {
     font-size: 16px;
   }
-  @media screen and (min-width: 992px) {
-    html {
-      font-size: 20px;
-    }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
   }
 }
-h1 {
+h1,
+h2,
+h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-h2 {
-  font-family: "Courier New", Courier, monospace;
-}
-h3 {
-  font-family: "Times New Roman", Times, serif;
-}
 main {
-  max-width: 40ch;
   margin: 0;
   padding: 1rem;
-  max-width: 70ch;
+  max-width: 60ch;
 }
 header {
   text-align: center;
   background-color: grey;
-  padding: 2.5rem 1rem;
+  padding: 1rem 1rem;
   position: relative;
   right: 0.25rem;
+  background-image: linear-gradient(grey, lightgray);
 }
 article + article {
   margin-top: 2.5rem;
@@ -48,34 +49,38 @@ article {
 }
 .nav-link {
   padding: 1rem;
+  transition: background-color 1s;
+  color: var(--text-color);
 }
-.nav-link {
-  color: black;
+.nav-link:focus {
+  background-color: silver;
 }
+
 .nav-link:hover {
   color: darkslategrey;
+  background-color: silver;
 }
 .nav-link:active {
-  color: lightgreen;
+  color: var(--brand-color);
 }
 article:nth-child(2) {
-  border-top: 0.25rem solid black;
+  border-top: 0.25rem solid var(--text-color);
 }
 article:nth-child(3) {
-  border-top: 0.25rem solid black;
+  border-top: 0.25rem solid var(--text-color);
 }
 article:nth-child(4) {
-  border-top: 0.25rem solid black;
+  border-top: 0.25rem solid var(--text-color);
 }
 article:nth-child(5) {
-  border-top: 0.25rem solid black;
+  border-top: 0.25rem solid var(--text-color);
 }
 
 ::selection {
-  background-color: green;
-  color: white;
+  background-color: var(--brand-color);
+  color: var(--accent-color);
 }
-h2::after {
+.über-mich::after {
   content: "🦸‍♂️";
 }
 
@@ -96,16 +101,21 @@ header {
   bottom: 1rem;
 }
 aside {
-  color: white;
-  background-color: hotpink;
+  color: var(--text-color);
+  background-color: var(--accent-color);
   padding: 0.25rem;
   position: absolute;
-  top: 1.15rem;
+  top: 1.35rem;
   right: 1.5rem;
   border-radius: 0.5rem;
 }
 aside {
   position: fixed;
+}
+
+.hire-me:hover {
+  transition: 2s;
+  transform: rotateX(360deg);
 }
 
 @media print {
@@ -121,8 +131,9 @@ aside {
 
 .navigation {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 @media screen and(768px) {
   .navigation {
@@ -133,6 +144,13 @@ aside {
 .experience {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-image: linear-gradient(white, white);
   justify-content: space-between;
+}
+footer {
+  height: 50px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(grey, gainsboro);
 }
