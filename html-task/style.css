@@ -36,7 +36,7 @@ main {
 header {
   text-align: center;
   background-color: grey;
-  padding: 1rem 1rem;
+  padding: 2rem 2rem;
   position: relative;
   right: 0.25rem;
   background-image: linear-gradient(grey, lightgray);
@@ -135,10 +135,17 @@ aside {
   align-items: center;
   justify-content: center;
 }
-@media screen and(768px) {
+@media screen and (min-width: 768px) {
   .navigation {
+    display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+@media screen and(min-width:768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 .experience {
